@@ -7,16 +7,18 @@
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/e71ba9264b.js" />
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/e71ba9264b.js" />
 
     </environment>
+    <link rel="stylesheet" href="https://use.fontawesome.com/e71ba9264b.js" />
 
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body>
+<body class="search-background">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container">
@@ -46,7 +48,7 @@
             @RenderBody()
         </main>
     </div>
-   
+
 
     <footer class="border-top footer pl-3  text-white-50" style="background-color:#343a40;">
         <div class="container">
@@ -62,9 +64,8 @@
     <environment exclude="Development">
 
     </environment>
-  
-    <script src="~/js/site.js" asp-append-version="true"></script>
 
+    <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
 </html>

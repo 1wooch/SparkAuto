@@ -1,11 +1,56 @@
 ﻿@page
 @model SparkAuto.Pages.ServiceTypes.IndexModel
 @{
+    ViewData["Title"] = "Index";
+    Layout = "~/pages/Shared/_Layout.cshtml";
 }
+@*<link rel="stylesheet" href="https://use.fontawesome.com/e71ba9264b.js" />*@
 
-<h1>Service Types</h1>
-
-
-<table>
-
-</table>
+<br />
+<br />
+<div class="border backgroundwhite">
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-info">Service Type List</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-page="Create" class="btn btn-info">
+                <i class="fas fa-plus"></i> Create New
+            </a>
+        </div>
+    </div>
+    <br />
+    <div>
+        @if (Model.ServiceType.Count == 0){
+            <p>No Service Type Exists.</p>
+    }else
+    {
+        <table class="table table-striped border">
+            <tr class="table-secondary">
+                <th>
+                    @Html.DisplayNameFor(m => m.ServiceType[0].Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.ServiceType[0].Price)
+                </th>
+                <th>
+                    
+                </th>
+            </tr>
+            @foreach(var item in Model.ServiceType)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(m=>item.Name)
+                    </td>
+          
+                    <td>
+                        @Html.DisplayFor(m => item.Name)
+                    </td>
+                    <td></td>
+                </tr>
+            }
+        </table>
+    }
+    </div>
+</div>

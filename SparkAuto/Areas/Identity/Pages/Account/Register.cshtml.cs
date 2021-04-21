@@ -120,7 +120,7 @@ namespace SparkAuto.Areas.Identity.Pages.Account
                     }
 
                     await _userManager.AddToRoleAsync(user, SD.AdminEndUser);
-                    //for the role and to create admin
+                    //for the role and to create admin or client or user
 
                     _logger.LogInformation("User created a new account with password.");
 
